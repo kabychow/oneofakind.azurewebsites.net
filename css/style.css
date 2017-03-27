@@ -13,9 +13,11 @@ body {
 a {
 	text-decoration: none;
 }
-h1, h2, h3 {
-	text-align: center;
+h1, h2 {
 	font-size: 15.5px;
+}
+h1, h2, h3, h4 {
+	text-align: center;
 }
 
 /* Navigation Bar */
@@ -32,15 +34,10 @@ nav a {
 	background-color: black;
 	-webkit-transition: 0.5s;
 	transition: 0.5s;
-}
-nav a svg {
-	margin-bottom: -4px;
+	border-bottom: 0.5px solid #191919;
 }
 nav a:hover {
 	background-color: #00796B;
-}
-nav a.add-line {
-	border-bottom: 0.5px solid #191919;
 }
 
 /* Home Section */
@@ -48,8 +45,8 @@ nav a.add-line {
 	min-height: 100vh;
 	background-color: #1e1e1e;
 	position: relative;
-	overflow: hidden;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	overflow: hidden;
 }
 .home img.banner {
 	max-width: 100%;
@@ -59,8 +56,6 @@ nav a.add-line {
 	transform: translateX(-50%);
 	-webkit-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
-	padding: 0;
-	margin: 0;
 }
 .home img.logo {
 	width: 468px;
@@ -68,48 +63,52 @@ nav a.add-line {
 	margin: 0 auto 26px auto;
 	display: block;
 }
-.home svg.menu-button {
-	margin: 20px 0 0 20px;
+.home svg {
+	margin: 20px;
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
 	cursor: pointer;
+	fill: #bbb;
+	width: 30px;
+	height: 30px;
 }
-.home svg.menu-button:hover {
+.home svg:hover {
 	fill: #777;
 }
 .home .text-container {
 	position: absolute;
-	top: 22vh;
+	top: 20vh;
 	width: 100%;
 }
-.home .text-container h2 {
+.home .text-container h2 a {
 	color: #666;
 	letter-spacing: 0.5px;
 	transition: 0.2s;
 	-webkit-transition: 0.2s;
 }
-.home .text-container h2:hover {
+.home .text-container h2 a:hover {
 	color: #009688;
 	font-size: 19px;
 	font-weight: bold;
 }
-.home .text-container h2.download {
+.home .text-container h2 a.download {
 	color: #888;
 	font-size: 22px;
 	font-weight: bold;
 }
-.home .text-container h2.download:hover {
+.home .text-container h2 a.download:hover {
 	color: #009688;
 	font-size: 25px;
 }
 
+/* What is Oneofakind */
 .what {
-	background-color: #f3f5f8;
-	padding: 20px 10px;
+	background-color: #1e1e1e;
+	padding: 40px 10px 100px 10px;
 }
 .what h3 {
 	text-transform: uppercase;
-	color: #353535;
+	color: white;
 	letter-spacing: 1px;
 	background: url('../img/arrow-line.png') no-repeat center bottom;
 	background-size: 236px 13px;
@@ -124,43 +123,107 @@ nav a.add-line {
 	font-size: 14px;
 	line-height: 24px;
 }
-
-.swag {
+.devices {
+	overflow: hidden;
+	background-color: #1e1e1e;
+}
+.devices .swag {
 	background: url('../img/swag.jpg') no-repeat center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 	background-attachment: fixed;
-	height: 50vh;
+	height: 70vh;
 	position: relative;
 }
-.swag .text-container {
+.devices .swag .text-container {
 	width: 50%;
 	position: absolute;
 	top: 50%;
 	margin-top: -74px;
 }
-.swag .text-container h1 {
+.devices .swag .text-container h1 {
 	font-weight: bold;
 	font-size: 37px;
 	color: white;
-	text-transform: uppercase;
 	letter-spacing: 5px;
 	line-height: 1.3em;
 }
-.swag .text-container h1 span.small {
+.devices .swag .text-container h1 span {
 	font-size: 24px;
 }
+.devices .devices-list-container {
+	padding: 0 100px;
+}
+.devices .devices-list {
+	padding: 50px 0;
+	float: left;
+	width: 33.33%;
+}
+.devices .devices-list h3 {
+	color: white;
+	letter-spacing: 0.5px;
+	background: url('../img/arrow-line.png') no-repeat center bottom;
+	background-size: 236px 13px;
+	font-size: 25px;
+	padding-bottom: 25px;
+	margin-bottom: 10px;
+}
+.devices .devices-list ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.devices .devices-list ul {
+	text-align: center;
+}
+.devices .devices-list ul li {
+	margin-bottom: 10px;
+}
+.devices .devices-list ul li a {
+	color: white;
+	font-weight: bold;
+	font-size: 15px;
+	cursor: pointer;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+}
+.devices .devices-list ul li a:hover {
+	color: #009688;
+}
+
+/* Footer */
+footer {
+	padding: 20px 30px;
+	background-color: black;
+	overflow: auto;
+}
+footer p {
+	float: right;
+	color: white;
+	font-size: 14px;
+}
+@media screen and (max-width: 1024px){
+	.devices .devices-list-container {
+		padding: 0;
+	}
+}
 @media screen and (max-width: 800px){
-	.swag .text-container {
+	.devices .swag {
+		height: 45vh;
+	}
+	.devices .swag .text-container {
 		width: 100%;
 		margin-top: -54px;
 	}
-    .swag .text-container h1 {
+    .devices .swag .text-container h1 {
 		font-size: 32px;
 	}
-	.swag .text-container h1 span.small {
+	.devices .swag .text-container h1 span.small {
 		font-size: 19px;
+	}
+	.devices .devices-list {
+		width: 100%;
 	}
 }
