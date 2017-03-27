@@ -223,6 +223,11 @@ footer p {
 		width: 100%;
 	}
 	.devices .swag {
-		height: 930px;
+		height: 750px;
+	}
+	.devices .swag .text-container {
+		width: 50%;
+		position: absolute;
+		margin-top: 10px;
 	}
 }
